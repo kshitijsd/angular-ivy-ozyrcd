@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+
+
+	<div class="search-puzzle">
+		<div id="time">
+			<form>
+				<input type="time" #time id="timeid" >
+				<button (click)="getTime(time.value)">Submit</button>
+				<br>
+				<input type="text" #time1   maxlength=5 minlength=5 id="timeid1"  pattern="^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$" title="Use Format hh:mm"  >
+				<button id="add"  (click)="getTime1(time1.value)" >Add</button>
+
+			</form>
+		</div>
+		<div *ngFor="let letter of alpha" class="row">
+			<div *ngFor="let subletter of letter" class="column">
+				<p
+					[ngStyle]="{'color':subletter.display?'#fff':'#53565a', 'text-shadow':subletter.display?'0px 0px 5px #fff':'0px 0px 0px'}">
+					{{subletter.letter}}
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

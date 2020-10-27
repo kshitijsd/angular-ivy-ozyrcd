@@ -1,0 +1,38 @@
+
+.search-puzzle{
+    font-family: 'Josefin Sans', Arial, "Trebuchet MS", sans-serif;
+  background-color :rgb(113, 113, 165);
+  /* color: black; */
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  padding:  50px;
+  font-size:30px;
+  transform:translateZ(0);
+  transition:background-color 0.5s linear;
+  
+}
+div.row{
+    display: flex;
+    position:relative;
+    justify-content: center;
+
+}
+div.column{
+    display:flex;
+    justify-content: center;
+    margin:0px;
+    height:30px;
+    width:30px;
+    
+
+}
+#time{
+    font-size: x-small;
+    margin-left: -50px;
+    margin-top: -50px;
+    padding-bottom: 50px;
+}
+input:invalid {
+    border: 2px solid red;
+  }
